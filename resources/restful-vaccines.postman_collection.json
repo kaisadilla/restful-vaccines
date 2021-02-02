@@ -1,47 +1,134 @@
 {
 	"info": {
-		"_postman_id": "04b0148c-f866-4fc3-8507-80ebcd301e77",
-		"name": "Hmm",
+		"_postman_id": "d5498928-ce0f-471a-8b9f-884ab81500c3",
+		"name": "Tests",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "Post",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Gibraltar\",\r\n    \"vaccinesPfizer\": 6663,\r\n    \"vaccinesModerna\": 200,\r\n    \"vaccinesUsed\": 6515,\r\n    \"peopleTotal\": 125\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:40006/vaccines/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "40006",
+					"path": [
+						"vaccines",
+						""
+					]
 				}
 			},
 			"response": []
 		},
 		{
 			"name": "Get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:40006/vaccines/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "40006",
+					"path": [
+						"vaccines",
+						"3"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Put",
 			"request": {
-				"method": "GET",
+				"method": "PUT",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Gibraltar\",\r\n    \"vaccinesPfizer\": 10000,\r\n    \"vaccinesModerna\": 5000,\r\n    \"vaccinesUsed\": 12300,\r\n    \"peopleTotal\": 375\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:40006/vaccines/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "40006",
+					"path": [
+						"vaccines",
+						"20"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Delete",
 			"request": {
-				"method": "GET",
+				"method": "DELETE",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": "http://localhost:40006/vaccines/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "40006",
+					"path": [
+						"vaccines",
+						"20"
+					]
+				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }
